@@ -2,12 +2,12 @@ import { PaintColor } from "./PaintColor.js"
 import { WheelsOptions } from "./WheelsOptions.js"
 import { TechnologyPackage } from "./TechnologyPackage.js"
 import { InteriorFabric } from "./InteriorFabric.js"
-import { CarOrder } from "./CarOrder.js"
+// import { CarOrder } from "./CarOrder.js"
 import { addCarOrder } from "./database.js"
 
-document.addEventListener(
+// document.addEventListener(
     
-)
+// )
 
 export const CarsRus = () => {
     return `
@@ -39,7 +39,7 @@ export const CarsRus = () => {
 
         <article class="carOrders">
             <h2>Custom Car Orders</h2>
-            ${CarOrder()}
+            {CarOrder()}
         </article>
     `
 }
