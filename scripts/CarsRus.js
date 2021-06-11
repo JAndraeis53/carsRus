@@ -6,7 +6,13 @@ import { CarOrder } from "./CarOrder.js"
 import { addCarOrder } from "./database.js"
 
 document.addEventListener(
-    
+    "click",
+    (event) => { 
+        const clickedItem = event.target
+        if (clickedItem.id === "orderButton") {
+            addCarOrder()
+        }
+    }
 )
 
 export const CarsRus = () => {
