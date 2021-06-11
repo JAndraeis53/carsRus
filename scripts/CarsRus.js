@@ -5,9 +5,15 @@ import { InteriorFabric } from "./InteriorFabric.js"
 import { CarOrder } from "./CarOrder.js"
 import { addCarOrder } from "./database.js"
 
-// document.addEventListener(
-    
-// )
+document.addEventListener(
+    "click",
+    (event) => { 
+        const clickedItem = event.target
+        if (clickedItem.id === "orderButton") {
+            addCarOrder()
+        }
+    }
+)
 
 export const CarsRus = () => {
     return `

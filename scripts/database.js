@@ -25,7 +25,7 @@ const database = {
     technologies: [
         {id: 1, package: "Basic Package (basic sound system)", price: 5.00},
         {id: 2, package: "Navigation Package (includes integrated navigation controls)", price: 100.00},
-        {id: 3, package: "Visibility Package (includes side and reat cameras)", price: 200.00},
+        {id: 3, package: "Visibility Package (includes side and rear cameras)", price: 200.00},
         {id: 4, package: "Ultra Package (includes navigation and visibility packages)", price: 300.00},
     ],
 
@@ -72,8 +72,8 @@ export const getCarOrders = () => {
 
 export const addCarOrder = () => {
     const newOrder = {...database.orderBuilder}
-    const lastIndex = database.customOrders.length - 1
-    newOrder.id = database.customOrders[lastIndex].id + 1
+    const lastIndex = database.carOrders.length - 1
+    newOrder.id = database.carOrders[lastIndex].id + 1
     newOrder.timestamp = Date.now()
     database.carOrders.push(newOrder)
     database.orderBuilder = {}
