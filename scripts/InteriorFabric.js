@@ -7,6 +7,22 @@
 
 import { getFabrics } from "./database.js"
 
+// document.addEventListener(
+//     "click",
+//     (clickEvent) => {
+//         const itemClicked = clickEvent.target
+//         if (itemClicked.id.startsWith("star")) {
+//             const [, celebrityId] = itemClicked.id.split("--")
+
+//             for (const celebrity of celebrities) {
+//                 if (celebrity.id === parseInt(celebrityId)) {
+//                     window.alert(`${celebrity.name} is ${celebrity.sport} star`)
+//                 }
+//             }
+//         }
+//     }
+// )
+
 const fabrics = getFabrics()
 
 export const InteriorFabric = () => {
@@ -14,7 +30,7 @@ export const InteriorFabric = () => {
 
     const listItems = fabrics.map(fabric => {
         return `<li>
-            <input type="radio" name="fabric" value="${fabric.id}" /> ${fabric.type}
+            <input id="fabric--${fabric.id}" type="radio" name="fabric" value="${fabric.id}" /> ${fabric.type}
         </li>`
     })
 
